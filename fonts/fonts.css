@@ -1,0 +1,24 @@
+/* Подключение файлов шрифта Raleway в двух начертаниях */
+
+@font-face {
+  /* Имя семейства для font-family в остальных стилях */
+  font-family: Raleway;
+  src:
+    url(./Raleway-Regular.woff2) format('woff2'),
+    url(./Raleway-Regular.woff) format('woff');
+  /* woff2 — приоритетный современный формат; woff — запасной */
+  font-weight: normal;
+  /* Соответствует font-weight: 400 */
+  font-display: swap;
+  /* Пока грузится шрифт, показывается fallback; потом подмена без «мигания» слишком долго */
+}
+
+@font-face {
+  font-family: Raleway;
+  src:
+    url(./Raleway-Bold.woff2) format('woff2'),
+    url(./Raleway-Bold.woff) format('woff');
+  font-weight: bold;
+  /* Соответствует font-weight: 700 */
+  font-display: swap;
+}
